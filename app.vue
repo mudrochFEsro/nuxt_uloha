@@ -1,0 +1,20 @@
+<script lang="ts" setup>
+// Hero
+import heroLogo from '~/assets/img/heroLogo.svg'
+const heroContent = {
+  heroHeadline: 'Zvýšte svoje zisky optimalizáciou vášho eshopu.',
+  heroCtaText: 'Mám záujem o UX audit',
+  heroLogoAlt: 'R UX Design RIESENIA.com'
+}
+</script>
+<template>
+  <Hero
+      :heroHeadline=heroContent.heroHeadline
+      :ctaText=heroContent.heroCtaText
+      :heroLogo=heroLogo
+      :heroLogoAlt=heroContent.heroLogoAlt
+  />
+</template>
+<style lang="scss">
+
+</style>
