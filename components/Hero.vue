@@ -57,9 +57,9 @@ defineProps<{
       top: 145px;
       left: 50%;
       transform: translateX(-50%);
-      @media screen and (max-width: 1050px) {
+      @media screen and (max-width: 1000px) {
         padding-top: unset;
-        font-size: 4.7vw;
+        font-size: 4.9vw;
         line-height: 1.6;
       }
       @media screen and (max-width: 576px) {

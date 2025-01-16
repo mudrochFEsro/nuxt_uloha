@@ -1,7 +1,7 @@
 <script setup lang="ts">
-defineProps({
+defineProps<{
   ctaText: String,
-});
+}>();
 </script>
 
 <template>
