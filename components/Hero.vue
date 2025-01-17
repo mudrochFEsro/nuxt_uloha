@@ -80,7 +80,6 @@ defineProps<{
     .Hero-img-wrap {
       min-width: 200px;
       display: flex;
-
       img {
         max-width: 145px;
         width: 100%;

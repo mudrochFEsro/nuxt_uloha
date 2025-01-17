@@ -6,6 +6,7 @@ const heroContent = {
   heroCtaText: 'Mám záujem o UX audit',
   heroLogoAlt: 'R UX Design RIESENIA.com'
 }
+// Content A
 </script>
 <template>
   <Hero
@@ -14,6 +15,9 @@ const heroContent = {
       :heroLogo=heroLogo
       :heroLogoAlt=heroContent.heroLogoAlt
   />
+  <Section>
+    <contentA/>
+  </Section>
 </template>
 <style lang="scss">
 
