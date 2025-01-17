@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SmallButton from "~/components/atoms/SmallButton.vue";
+import SmallButton from "~/components/UI/SmallButton.vue";
 
 defineProps<{
   heroHeadline: string;

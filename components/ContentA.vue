@@ -1,18 +1,18 @@
 <script setup lang="ts">
-
+import Box from "~/components/UI/Box.vue";
 </script>
 
 <template>
   <div class="ContentA">
-    <div class="box">
+    <Box direction="Reverse">
       <div class="b1">
         Rýchle výsledky pomocou UX auditu.
       </div>
       <div class="b2">
         google parntner
       </div>
-    </div>
-    <div class="box">
+    </Box>
+    <Box direction="Normal">
       <div class="b3">
         UX auditom vášho riešenia lepšie pochopíte, ako vaši zákazníci používajú váš produkt, zvýšite ich spokojnosť
         a hlavne vaše zisky.
@@ -28,26 +28,26 @@
 
         Zvýšime návštevnosť vašich stránok
       </div>
-    </div>
-    <div class="box">
+    </Box>
+    <Box direction="Normal">
       <div class="b5">
         Dosiahnite lepšie výsledky vašej webstránky alebo e-shopu pomocou UX auditu.
       </div>
       <div class="b6">Mám záujem o UX audit</div>
-    </div>
+    </Box>
   </div>
 </template>
 
 <style scoped lang="scss">
-.ContentA {
-  .box {
-    justify-content: center;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    @media screen and (max-width: 576px) {
-      flex-direction: column;
-    }
+//.ContentA {
+//  .box {
+//    justify-content: center;
+//    display: flex;
+//    flex-direction: row;
+//    width: 100%;
+//    @media screen and (max-width: 576px) {
+//      flex-direction: column;
+//    }
 
     .b1 {
       background-color: #00a286;
@@ -84,7 +84,7 @@
       height: 100px;
 
     }
-  }
-
-}
+//  }
+//
+//}
 </style>
