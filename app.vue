@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 // Hero
-import heroLogo from '~/assets/img/heroLogo.svg'
+import heroLogo from 'assets/img/logo/heroLogo.svg'
 const heroContent = {
   heroHeadline: 'Zvýšte svoje zisky optimalizáciou vášho eshopu.',
   heroCtaText: 'Mám záujem o UX audit',
