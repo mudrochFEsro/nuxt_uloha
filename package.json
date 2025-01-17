@@ -16,6 +16,9 @@
     "vue-router": "latest"
   },
   "devDependencies": {
-    "sass-embedded": "^1.83.4"
+    "@nuxtjs/style-resources": "^1.2.2",
+    "node-sass": "^9.0.0",
+    "sass-embedded": "^1.83.4",
+    "sass-loader": "^16.0.4"
   }
 }

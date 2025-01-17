@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import SmallButton from "~/components/atoms/SmallButton.vue";
+
 defineProps<{
   heroHeadline: string;
   ctaText: string;
@@ -25,17 +26,19 @@ defineProps<{
 </template>
 
 <style scoped lang="scss">
+@use 'assets/scss/colors' as colors;
 .Hero {
-  background: linear-gradient(172deg, #3D2E80 51.38%, #DC1969 125.72%);
+  background: linear-gradient(172deg, colors.$heroPrimary 51.38%,  colors.$heroSecondary 125.72%);
   min-height: 555px;
   width: 100%;
   text-align: center;
   padding: 60px;
-  @media screen and  (max-width: 576px) {
+  @media screen and (max-width: 576px) {
     padding: 30px 30px 60px 30px;
     min-height: unset;
     height: 410px;
   }
+
   .Hero-body {
     display: flex;
     justify-content: space-between;
@@ -47,11 +50,12 @@ defineProps<{
       flex-direction: column;
       height: 100%;
     }
+
     h1 {
       font-size: 50px;
       font-weight: 900;
       line-height: 80px;
-      color: white;
+      color: colors.$white;
       position: absolute;
       width: 70%;
       top: 145px;
