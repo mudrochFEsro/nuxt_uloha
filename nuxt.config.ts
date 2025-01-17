@@ -11,7 +11,10 @@ export default defineNuxtConfig({
     css: [
         '@/assets/scss/global.scss',
     ],
-
+    components: {
+        global: true,
+        dirs: ['~/components']
+    },
     devtools: {enabled: true},
     compatibilityDate: '2025-01-17',
 });
