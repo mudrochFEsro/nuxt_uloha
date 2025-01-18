@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import SmallButton from "~/components/UI/SmallButton.vue";
-
 defineProps<{
   heroHeadline: string;
   ctaText: string;
@@ -42,7 +41,7 @@ defineProps<{
   .Hero-body {
     display: flex;
     justify-content: space-between;
-    max-width: 1000px;
+    max-width: 920px;
     height: 435px;
     margin: 0 auto;
     position: relative;
@@ -61,9 +60,9 @@ defineProps<{
       top: 145px;
       left: 50%;
       transform: translateX(-50%);
-      @media screen and (max-width: 1000px) {
+      @media screen and (max-width: 920px) {
         padding-top: unset;
-        font-size: 4.9vw;
+        font-size: 5.4vw;
         line-height: 1.6;
       }
       @media screen and (max-width: 576px) {

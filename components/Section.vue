@@ -10,6 +10,6 @@
     padding: 90px 0;
     margin: 0 auto;
     width: 100%;
-    max-width: 1000px;
+    max-width: 920px;
   }
 </style>

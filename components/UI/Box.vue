@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{
-  direction?: 'Normal' | 'Reverse'
+  direction: 'Normal' | 'Reverse'
 }>();
 </script>
 
@@ -14,14 +14,18 @@ defineProps<{
 .Box {
   justify-content: space-between;
   display: flex;
+  width: 100%;
+
 }
 .BoxReverse{
   @media screen and (max-width: 576px) {
+    gap: 0;
     flex-direction: column-reverse;
   }
 }
 .BoxNormal{
   @media screen and (max-width: 576px) {
+    gap: 0;
     flex-direction: column;
   }
 }

@@ -4,7 +4,7 @@ export default defineNuxtConfig({
     ],
     googleFonts: {
         families: {
-            Mulish: [400, 600, 900]
+            Mulish: [400, 500, 600, 700, 800, 900]
         },
         display: 'swap',
     },
