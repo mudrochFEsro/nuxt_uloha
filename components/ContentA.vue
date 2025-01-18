@@ -64,15 +64,14 @@ const contentA = {
     max-width: 460px;
     width: 100%;
   }
-
   .logoContainer {
     justify-content: flex-end;
-    display: inline-flex;
+    display: flex;
     height: fit-content;
-    flex-wrap: wrap;
     gap: 40px;
     @media screen and (max-width: 980px) {
-      justify-content: center;
+      align-items: center;
+      flex-direction: column;
       max-width: unset;
       width: 100%;
     }
@@ -92,8 +91,6 @@ const contentA = {
     max-width: 380px;
     width: 100%;
     @media screen and (max-width: 980px) {
-      justify-content: flex-start;
-      display: flex;
       max-width: unset;
     }
     @media screen and (max-width: 980px) {
