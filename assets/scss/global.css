@@ -17,4 +17,14 @@
   margin-top: -10px;
 }
 
+@media screen and (max-width: 980px) {
+  .p-left-15 {
+    padding-left: 15px;
+  }
+
+  .p-right-15 {
+    padding-right: 15px;
+  }
+}
+
 /*# sourceMappingURL=global.css.map */

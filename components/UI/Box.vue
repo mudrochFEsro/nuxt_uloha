@@ -15,7 +15,6 @@ defineProps<{
   justify-content: space-between;
   display: flex;
   width: 100%;
-
 }
 .BoxReverse{
   @media screen and (max-width: 576px) {

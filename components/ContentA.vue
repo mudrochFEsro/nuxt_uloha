@@ -24,13 +24,13 @@ const contentA = {
 <template>
   <div class="ContentA">
     <Box direction="Reverse">
-      <div class="textContainer">
+      <div class="textContainer p-right-15">
         <Headline
             align="Left"
             :text=contentA.headlineText
         />
       </div>
-      <div class="logoContainer m-top-25">
+      <div class="logoContainer p-left-15 m-top-25">
         <img :src=googleLogo
              :alt=contentA.googleLogoAlt
         >
@@ -41,13 +41,13 @@ const contentA = {
       </div>
     </Box>
     <Box direction="Normal">
-      <div class="textContainer p-top-70">
+      <div class="textContainer p-right-15 p-top-70">
         <Text
             fontSize="Big"
-            :text="contentA.text1"
+            :text=contentA.text1
         />
       </div>
-      <div class="listContainer minus-m-top-10">
+      <div class="listContainer p-left-15 minus-m-top-10">
         <List
             :listTexts=contentA.listTexts
         />
@@ -64,23 +64,41 @@ const contentA = {
     max-width: 460px;
     width: 100%;
   }
+
   .logoContainer {
     justify-content: flex-end;
-    display: flex;
-    white-space: nowrap;
-    img:first-of-type {
-      margin-right: 40px;
-      width: 185px;
-      height: 80px;
+    display: inline-flex;
+    height: fit-content;
+    flex-wrap: wrap;
+    gap: 40px;
+    @media screen and (max-width: 980px) {
+      justify-content: center;
+      max-width: unset;
+      width: 100%;
     }
+
+    img:first-of-type {
+      width: 100%;
+      max-width: 185px;
+    }
+
     img {
-      width: 161px;
-      height: 76px;
+      width: 100%;
+      max-width: 161px;
+
     }
   }
   .listContainer {
     max-width: 380px;
     width: 100%;
+    @media screen and (max-width: 980px) {
+      justify-content: flex-start;
+      display: flex;
+      max-width: unset;
+    }
+    @media screen and (max-width: 980px) {
+      padding-top: 89px;
+    }
   }
 }
 
