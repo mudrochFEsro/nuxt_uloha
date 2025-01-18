@@ -4,12 +4,20 @@ import Headline from "~/components/UI/Headline.vue";
 import googleLogo from "assets/img/logo/googlePartnerLogo.svg"
 import memberOfADMA from "assets/img/logo/memberOfAdmaLogo.svg"
 import Text from "~/components/UI/Text.vue";
+import List from "~/components/UI/List.vue";
 
 const contentA = {
   headlineText: "Rýchle <span>výsledky</span> pomocou UX auditu.",
   googleLogoAlt: "Google Partner Premium",
   memberOfADMALogoAlt: "Members of ADMA",
   text1: "UX auditom vášho riešenia lepšie pochopíte, ako vaši zákazníci používajú váš produkt, <strong>zvýšite ich spokojnosť a&nbsp;hlavne vaše zisky.</strong>",
+  listTexts: [
+    "Odhalíme nedostatky na vašej stránke",
+    "Zvýšime konverzný pomer vašich stránok",
+    "Zvýšime výkon marketingových kampaní",
+    "Znížime vaše náklady na vývoj",
+    "Zvýšime návštevnosť vašich stránok"
+  ]
 }
 </script>
 
@@ -33,10 +41,15 @@ const contentA = {
       </div>
     </Box>
     <Box direction="Normal">
-      <div class="textContainer p-top-50">
+      <div class="textContainer p-top-70">
         <Text
             fontSize="Big"
             :text="contentA.text1"
+        />
+      </div>
+      <div class="listContainer minus-m-top-10">
+        <List
+            :listTexts=contentA.listTexts
         />
       </div>
     </Box>
@@ -47,7 +60,6 @@ const contentA = {
 
 <style scoped lang="scss">
 .ContentA {
-  padding: 0 30px;
   .textContainer {
     max-width: 460px;
     width: 100%;
@@ -57,7 +69,7 @@ const contentA = {
     display: flex;
     white-space: nowrap;
     img:first-of-type {
-      padding-right: 40px;
+      margin-right: 40px;
       width: 185px;
       height: 80px;
     }
@@ -65,6 +77,10 @@ const contentA = {
       width: 161px;
       height: 76px;
     }
+  }
+  .listContainer {
+    max-width: 380px;
+    width: 100%;
   }
 }
 

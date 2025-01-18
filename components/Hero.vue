@@ -41,7 +41,7 @@ defineProps<{
   .Hero-body {
     display: flex;
     justify-content: space-between;
-    max-width: 920px;
+    max-width: 980px;
     height: 435px;
     margin: 0 auto;
     position: relative;
@@ -60,9 +60,9 @@ defineProps<{
       top: 145px;
       left: 50%;
       transform: translateX(-50%);
-      @media screen and (max-width: 920px) {
+      @media screen and (max-width: 980px) {
         padding-top: unset;
-        font-size: 5.4vw;
+        font-size: 5.1vw;
         line-height: 1.6;
       }
       @media screen and (max-width: 576px) {

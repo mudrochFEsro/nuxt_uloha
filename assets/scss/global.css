@@ -5,12 +5,16 @@
   box-sizing: border-box;
 }
 
-.p-top-50 {
-  padding-top: 50px;
+.p-top-70 {
+  padding-top: 70px;
 }
 
 .m-top-25 {
   margin-top: 25px;
+}
+
+.minus-m-top-10 {
+  margin-top: -10px;
 }
 
 /*# sourceMappingURL=global.css.map */

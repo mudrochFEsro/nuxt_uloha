@@ -7,9 +7,9 @@
 
 <style scoped lang="scss">
   section {
-    padding: 90px 0;
+    padding: 90px 30px 0 30px;
     margin: 0 auto;
     width: 100%;
-    max-width: 920px;
+    max-width: 980px;
   }
 </style>
