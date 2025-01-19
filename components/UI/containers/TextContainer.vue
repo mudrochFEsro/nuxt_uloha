@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{
-  size: string
+  size: 'Wide' | 'Narrow'
 }>();
 </script>
 <template>

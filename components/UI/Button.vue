@@ -1,7 +1,7 @@
 <script setup lang="ts">
 defineProps<{
   ctaText: string,
-  size: string
+  size: 'Small' | 'Big'
 }>();
 </script>
 

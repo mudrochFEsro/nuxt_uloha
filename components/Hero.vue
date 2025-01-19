@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Button from "~/components/UI/Button.vue";
+import Button from "@/components/UI/Button.vue";
 defineProps<{
   heroHeadline: string;
   ctaText: string;

@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import Tick from '@/assets/img/tick.svg';
-
+import Tick from "@/assets/img/tick.svg";
 defineProps<{
   listTexts: string[]
 }>();
@@ -9,7 +8,7 @@ defineProps<{
 <template>
   <ul>
     <li v-for="(listText, index) in listTexts" :key="index">
-      <img :src="Tick" alt="Checkmark"  />
+      <img :src=Tick alt="Checkmark"  />
       <span>{{ listText }}</span>
     </li>
   </ul>
@@ -38,6 +37,4 @@ li {
     height: 24px;
   }
 }
-
-
 </style>

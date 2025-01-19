@@ -5,7 +5,7 @@ defineProps<{
 }>();
 </script>
 <template>
-  <h2 :class="`Box${align}`" v-html="text"></h2>
+  <h2 :class="`Align${align}`" v-html="text"></h2>
 </template>
 
 <style scoped lang="scss">
