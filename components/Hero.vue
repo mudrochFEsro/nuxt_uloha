@@ -36,7 +36,7 @@ defineProps<{
   text-align: center;
   padding: 50px;
   @media screen and (max-width: 576px) {
-    padding: 30px 30px 50px 30px;
+    padding: 25px 25px 50px 25px;
     min-height: unset;
     height: 410px;
   }
