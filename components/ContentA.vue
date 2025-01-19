@@ -75,6 +75,11 @@ const contentA = {
         />
       </CtaContainer>
     </DirectionContainer>
+    <DirectionContainer direction="Normal">
+      <div class="QuotationContainer">
+
+      </div>
+    </DirectionContainer>
   </div>
 </template>
 
@@ -84,6 +89,10 @@ const contentA = {
     display: flex;
     flex-direction: column;
     gap: 50px;
+  }
+  .QuotationContainer {
+    border: 1px solid black;
+    padding: 25px 35px;
   }
 }
 </style>

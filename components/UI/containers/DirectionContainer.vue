@@ -5,24 +5,24 @@ defineProps<{
 </script>
 
 <template>
-  <div class="Box" :class="`Box${direction}`">
+  <div class="DirectionContainer" :class="`Direction${direction}`">
     <slot></slot>
   </div>
 </template>
 
 <style scoped lang="scss">
-.Box {
+.DirectionContainer {
   justify-content: space-between;
   display: flex;
   width: 100%;
 }
-.BoxReverse{
+.DirectionReverse{
   @media screen and (max-width: 768px) {
     gap: 50px;
     flex-direction: column-reverse;
   }
 }
-.BoxNormal{
+.DirectionNormal{
   @media screen and (max-width: 768px) {
     gap: 60px;
     flex-direction: column;
