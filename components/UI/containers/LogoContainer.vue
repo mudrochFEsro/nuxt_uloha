@@ -17,10 +17,10 @@
     flex-direction: column;
     max-width: unset;
   }
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 768px) {
     flex-direction: row;
-    justify-content: center;
-    gap: 10vw;
+    justify-content: space-between;
+
   }
 
   ::v-deep(img:first-of-type) {
@@ -30,13 +30,9 @@
     width: 100%;
     max-width: 161px;
   }
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 768px) {
     ::v-deep(img), ::v-deep(img:first-of-type) {
       max-width: unset;
-    }
-  }
-  @media screen and (max-width: 450px) {
-    ::v-deep(img), ::v-deep(img:first-of-type) {
       width: 36.5vw;
     }
   }

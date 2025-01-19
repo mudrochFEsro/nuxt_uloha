@@ -25,7 +25,7 @@ defineProps<{
 .Narrow{
   max-width: 460px;
   width: 100%;
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 768px) {
     max-width: unset;
 
   }

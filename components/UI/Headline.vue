@@ -23,7 +23,7 @@ h2 {
     border-bottom: 14px solid colors.$underline;
   }
 
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 768px) {
     max-width: unset;
     font-size: 32px;
     line-height: 44px;

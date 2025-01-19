@@ -66,7 +66,7 @@
     padding-right: 15px;
   }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .p-top-70,
 .m-top-70,
 .minus-m-top-70 {

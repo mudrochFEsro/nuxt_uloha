@@ -80,7 +80,7 @@ const contentA = {
 
 <style scoped lang="scss">
 .ContentA {
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
     gap: 50px;

@@ -35,7 +35,7 @@ defineProps<{
   width: 100%;
   text-align: center;
   padding: 50px;
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 768px) {
     padding: 25px 25px 50px 25px;
     min-height: unset;
     height: 410px;
@@ -48,7 +48,7 @@ defineProps<{
     height: 435px;
     margin: 0 auto;
     position: relative;
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 768px) {
       flex-direction: column;
       height: 100%;
     }
@@ -68,14 +68,16 @@ defineProps<{
         font-size: 5.1vw;
         line-height: 1.6;
       }
-      @media screen and (max-width: 576px) {
+      @media screen and (max-width: 768px) {
         font-size: 30px;
         width: 100%;
+        max-width: 340px;
         line-height: 45px;
         position: relative;
         top: unset;
         left: unset;
         transform: unset;
+        margin: 0 auto;
       }
     }
 

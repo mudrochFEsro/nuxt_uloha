@@ -20,7 +20,7 @@ button {
   border-radius: 8px;
   width: 100%;
 
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 768px) {
     margin: 0 auto;
   }
 }
@@ -37,8 +37,9 @@ button {
   @media screen and (max-width: 980px) {
     font-size: 2.1vw;
   }
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 768px) {
     font-size: 20px;
+    max-width: unset;
   }
 }
 </style>

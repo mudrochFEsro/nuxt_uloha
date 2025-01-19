@@ -50,7 +50,7 @@ $spacing-2: (
         "0": 0px,
 );
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   @each $size, $value in $spacing-0 {
     .p-top-#{$size},
     .m-top-#{$size},
