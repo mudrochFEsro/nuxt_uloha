@@ -31,7 +31,7 @@ const contentA = {
 <template>
   <div class="ContentA">
     <DirectionContainer direction="Reverse">
-      <TextContainer class="p-right-15">
+      <TextContainer size="Narrow" class="p-right-15">
         <Headline
             align="Left"
             :text=contentA.headlineText
@@ -49,7 +49,7 @@ const contentA = {
       </LogoContainer>
     </DirectionContainer>
     <DirectionContainer direction="Normal">
-      <TextContainer class="p-right-15 p-top-70">
+      <TextContainer size="Narrow" class="p-right-15 p-top-70">
         <Text
             fontSize="Big"
             :text=contentA.text1
@@ -62,7 +62,7 @@ const contentA = {
       </ListContainer>
     </DirectionContainer>
     <DirectionContainer direction="Normal">
-      <TextContainer class="p-right-15 p-top-70">
+      <TextContainer size="Wide" class="p-right-15 p-top-70">
         <Text
             fontSize="Big"
             :text=contentA.text2

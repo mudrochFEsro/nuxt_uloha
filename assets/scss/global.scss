@@ -1,3 +1,5 @@
+@use "sass:map";
+
 * {
   font-family: 'Mulish', sans-serif;
   margin: 0;
@@ -53,14 +55,14 @@ $spacing-2: (
     .p-top-#{$size},
     .m-top-#{$size},
     .minus-m-top-#{$size} {
-      margin: map-get($spacing-2, "0");
-      padding: map-get($spacing-2, "0");
+      margin: map.get($spacing-2, "0");
+      padding: map.get($spacing-2, "0");
     }
   }
   .p-left-15,
   .p-right-15 {
-    margin: map-get($spacing-2, "0");
-    padding: map-get($spacing-2, "0");
+    margin: map.get($spacing-2, "0");
+    padding: map.get($spacing-2, "0");
   }
 }
 

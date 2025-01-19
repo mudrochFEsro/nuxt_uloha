@@ -11,8 +11,8 @@ defineProps<{
 
 <template>
   <div class="Hero">
-    <div class="Hero-body">
-      <div class="Hero-img-wrap">
+    <div class="HeroBody">
+      <div class="HeroImgWrap">
         <img
             :src=heroLogo
             :alt=heroLogoAlt
@@ -34,14 +34,14 @@ defineProps<{
   min-height: 555px;
   width: 100%;
   text-align: center;
-  padding: 60px;
+  padding: 50px;
   @media screen and (max-width: 576px) {
-    padding: 30px 30px 60px 30px;
+    padding: 30px 30px 50px 30px;
     min-height: unset;
     height: 410px;
   }
 
-  .Hero-body {
+  .HeroBody {
     display: flex;
     justify-content: space-between;
     max-width: 980px;
@@ -79,7 +79,7 @@ defineProps<{
       }
     }
 
-    .Hero-img-wrap {
+    .HeroImgWrap {
       min-width: 200px;
       display: flex;
       img {

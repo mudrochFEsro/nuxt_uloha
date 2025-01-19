@@ -23,17 +23,21 @@
     gap: 10vw;
   }
 
-  img:first-of-type {
-    width: 100%;
+  ::v-deep(img:first-of-type) {
     max-width: 185px;
   }
-  img {
+  ::v-deep(img) {
     width: 100%;
     max-width: 161px;
   }
   @media screen and (max-width: 576px) {
-    img, img:first-of-type {
-      width: 37vw;
+    ::v-deep(img), ::v-deep(img:first-of-type) {
+      max-width: unset;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    ::v-deep(img), ::v-deep(img:first-of-type) {
+      width: 36.5vw;
     }
   }
 }
