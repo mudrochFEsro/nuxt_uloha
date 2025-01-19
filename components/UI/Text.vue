@@ -21,6 +21,9 @@ p {
 .Big {
   font-size: 24px;
   line-height: 40px;
+  @media screen and (max-width: 576px) {
+    font-size: 20px;
+  }
 }
 .Small {
   font-size: 16px;

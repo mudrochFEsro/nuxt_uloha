@@ -9,7 +9,7 @@ defineProps<{
 <template>
   <ul>
     <li v-for="(listText, index) in listTexts" :key="index">
-      <img :src="Tick" alt="Checkmark icon" class="icon" />
+      <img :src="Tick" alt="Checkmark"  />
       <span>{{ listText }}</span>
     </li>
   </ul>
@@ -26,14 +26,18 @@ ul {
 
 li {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 15px;
   font-size: 18px;
   line-height: 27px;
+  @media screen and (max-width: 576px) {
+    gap: 20px;
+  }
+  img {
+    width: 24px;
+    height: 24px;
+  }
 }
 
-.icon {
-  width: 24px;
-  height: 24px;
-}
+
 </style>

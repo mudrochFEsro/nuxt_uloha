@@ -18,17 +18,27 @@ h2 {
   font-weight: 700;
   max-width: 430px;
   width: 100%;
+
   :deep(span) {
     border-bottom: 14px solid colors.$underline;
   }
+
+  @media screen and (max-width: 576px) {
+    max-width: unset;
+    font-size: 32px;
+    line-height: 44px;
+  }
 }
+
 .AlignCenter {
   text-align: center;
 }
+
 .AlignRight {
   text-align: right;
 }
-.AlignLeft{
+
+.AlignLeft {
   text-align: left;
 }
 

@@ -18,13 +18,13 @@ defineProps<{
 }
 .BoxReverse{
   @media screen and (max-width: 576px) {
-    gap: 0;
+    gap: 50px;
     flex-direction: column-reverse;
   }
 }
 .BoxNormal{
   @media screen and (max-width: 576px) {
-    gap: 0;
+    gap: 60px;
     flex-direction: column;
   }
 }

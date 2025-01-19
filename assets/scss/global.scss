@@ -4,21 +4,63 @@
   padding: 0;
   box-sizing: border-box;
 }
-.p-top-70{
-  padding-top: 70px;
-}
-.m-top-25{
-  margin-top: 25px;
-}
-.minus-m-top-10{
-  margin-top: -10px;
-}
-@media screen and (max-width: 980px) {
-  .p-left-15{
-    padding-left: 15px;
+
+$spacing-0: (
+        "70": 70px,
+        "25": 25px,
+        "10": 10px,
+);
+@each $size, $value in $spacing-0 {
+  .p-top-#{$size} {
+    padding-top: $value;
   }
-  .p-right-15{
-    padding-right: 15px;
+  .m-top-#{$size} {
+    margin-top: $value;
+  }
+  .minus-m-top-#{$size} {
+    margin-top: -$value;
+  }
+}
+
+
+$spacing-1: (
+        "88": 88px,
+        "15": 15px,
+);
+
+
+
+@media screen and (max-width: 980px) {
+  @each $size, $value in $spacing-1 {
+    .p-top-#{$size} {
+      padding-top: $value;
+    }
+    .p-left-#{$size} {
+      padding-left: $value;
+    }
+    .p-right-#{$size} {
+      padding-right: $value;
+    }
+  }
+}
+
+$spacing-2: (
+        "0": 0px,
+);
+
+@media screen and (max-width: 576px) {
+  @each $size, $value in $spacing-0 {
+    .p-top-#{$size},
+    .m-top-#{$size},
+    .minus-m-top-#{$size} {
+      margin: map-get($spacing-2, "0");
+      padding: map-get($spacing-2, "0");
+    }
+  }
+  .p-left-15,
+  .p-right-15 {
+    margin: map-get($spacing-2, "0");
+    padding: map-get($spacing-2, "0");
   }
 }
 
