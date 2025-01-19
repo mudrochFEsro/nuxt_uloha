@@ -70,7 +70,7 @@ const contentA = {
       </TextContainer>
       <CtaContainer class="p-left-15 p-top-70">
         <Button
-            size="Big"
+            ctaSize="Big"
             :ctaText=contentA.ctaText
         />
       </CtaContainer>

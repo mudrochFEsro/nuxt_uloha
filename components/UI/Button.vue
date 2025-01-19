@@ -1,14 +1,12 @@
 <script setup lang="ts">
 defineProps<{
-  ctaText: string,
-  size: 'Small' | 'Big'
+  ctaText?: string;
+  ctaSize?: 'Small' | 'Big';
 }>();
 </script>
-
 <template>
-  <button :class=size >{{ ctaText }}</button>
+  <button type="button" :class=ctaSize >{{ ctaText }}</button>
 </template>
-
 <style scoped lang="scss">
 @use 'assets/scss/colors' as colors;
 button {
@@ -24,13 +22,15 @@ button {
     margin: 0 auto;
   }
 }
-.Small{
+
+.Small {
   font-size: 14px;
   max-width: 200px;
   height: 42px;
 
 }
-.Big{
+
+.Big {
   font-size: 20px;
   max-width: 380px;
   height: 72px;

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Button from "@/components/UI/Button.vue";
+
 defineProps<{
   heroHeadline: string;
   ctaText: string;
@@ -20,7 +21,7 @@ defineProps<{
       </div>
       <h1>{{ heroHeadline }}</h1>
       <Button
-           size="Small"
+          ctaSize="Small"
           :ctaText="ctaText"
       />
     </div>
