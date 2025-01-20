@@ -17,6 +17,11 @@ p {
   :deep(strong) {
     font-weight: 800;
   }
+  :deep(a) {
+    font-weight: 900;
+    color: colors.$ctaAndLink;
+    text-decoration: none;
+  }
 }
 .Big {
   font-size: 24px;
