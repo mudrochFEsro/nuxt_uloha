@@ -12,6 +12,10 @@ import ListContainer from "@/components/UI/containers/ListContainer.vue";
 import CtaContainer from "@/components/UI/containers/CtaContainer.vue";
 import SvetNapojovLogo from "@/assets/img/logo/svetNapojovLogo.svg";
 import AlanDelon from "@/assets/img/logo/alainDelonLogo.svg";
+import QuotationContainer from "@/components/UI/containers/QuotationContainer.vue";
+import QuotationBox from "@/components/UI/containers/QuotationBox.vue";
+import BrandContainer from "@/components/UI/containers/BrandContainer.vue";
+
 const contentA = {
   headlineText: "Rýchle <span>výsledky</span> pomocou UX auditu.",
   googleLogoAlt: "Google Partner Premium",
@@ -26,12 +30,11 @@ const contentA = {
   ],
   text2: "Dosiahnite lepšie výsledky vašej webstránky alebo <nobr>e-shopu</nobr> <strong>pomocou UX auditu.</strong>",
   ctaText: "Mám záujem o UX audit",
-  text3: "Pravidelné UX audity a postupné vylepšovanie nášho internetového obchodu je už niekoľko rokov súčasťou našej dlhodobej stratégie v predaji. UX tím v Riešeniach odvádza skvelú prácu, ktorú sprevádzajú viditeľné výsledky a spokojnosť našich zákazníkov. Okrem ich prístupu k nášmu biznisu … čítať viac",
-  brandText1:{
+  brandText1: {
     ownerName: "Jozef Korman",
     brandText: "Konateľ <a target='_blank' href='https://www.svetnapojov.sk'>SvetNápojov.sk</a>",
   },
-  brandText2:{
+  brandText2: {
     ownerName: "Richard Wohlstein",
     brandText: "Retail manager <a target='_blank' href='https://www.https://www.alaindelon.sk'>AlainDelon.sk</a>",
   }
@@ -86,88 +89,70 @@ const contentA = {
       </CtaContainer>
     </DirectionContainer>
     <DirectionContainer direction="Normal" class="p-top-140">
-      <div class="QuotationContainer p-right-15">
-        <div class="QuotationBox">
-          <Text :text=contentA.text3 fontSize="Small"/>
-        </div>
-        <div class="BrandContainer">
-          <img :src=SvetNapojovLogo alt="Svet Nápojov">
-          <div class="BrandText">
-            <h3 v-html=contentA.brandText1.ownerName />
-            <Text
-                fontSize="Small"
-                :text=contentA.brandText1.brandText
-            />
-          </div>
-        </div>
-      </div>
-      <div class="QuotationContainer p-left-15">
-        <div class="QuotationBox">
-          <Text :text=contentA.text3 fontSize="Small"/>
-        </div>
-        <div class="BrandContainer">
-          <img :src=AlanDelon alt="Alan Delon">
-          <div class="BrandText">
-            <h3 v-html=contentA.brandText2.ownerName />
-            <Text
-                fontSize="Small"
-                :text=contentA.brandText2.brandText
-            />
-          </div>
-        </div>
-      </div>
+      <QuotationContainer class="p-right-15">
+        <template #quotation>
+          <QuotationBox>
+            Pravidelné UX audity a postupné vylepšovanie nášho internetového obchodu je už niekoľko rokov súčasťou našej
+            dlhodobej stratégie v predaji. UX tím v Riešeniach odvádza skvelú prácu, ktorú sprevádzajú viditeľné
+            výsledky a spokojnosť našich zákazníkov. Okrem ich prístupu k nášmu biznisu
+            Pravidelné UX audity a postupné vylepšovanie nášho internetového obchodu je už niekoľko rokov súčasťou našej
+            dlhodobej stratégie v predaji. UX tím v Riešeniach odvádza skvelú prácu, ktorú sprevádzajú viditeľné
+            výsledky a spokojnosť našich zákazníkov.
+          </QuotationBox>
+        </template>
+        <template #brand>
+          <BrandContainer>
+            <template #brandLogo>
+              <img :src=SvetNapojovLogo alt="Svet Nápojov">
+            </template>
+            <template #brandText>
+              <h3 v-html=contentA.brandText1.ownerName></h3>
+              <Text
+                  fontSize="Small"
+                  :text=contentA.brandText1.brandText
+              />
+            </template>
+          </BrandContainer>
+        </template>
+      </QuotationContainer>
+      <QuotationContainer class="p-left-15">
+        <template #quotation>
+          <QuotationBox>
+            S UX tímom Riešení úzko spolupracujeme už dlhé roky a sú dôležitým partnerom nášho biznisu. Vďaka ich
+            know-how pre nás od samého začatku správne nastavili zdravý pomer prvotriedneho dizajnu a funkčnosti webu,
+            ktorý následne vylepšovali pomocou relevantných analýz a dát. Aj ich zásluhou
+            S UX tímom Riešení úzko spolupracujeme už dlhé roky a sú dôležitým partnerom nášho biznisu. Vďaka ich
+            know-how pre nás od samého začatku správne nastavili zdravý pomer prvotriedneho dizajnu a funkčnosti webu,
+            ktorý následne vylepšovali pomocou relevantných analýz a dát.
+          </QuotationBox>
+        </template>
+        <template #brand>
+          <BrandContainer>
+            <template #brandLogo>
+              <img :src=AlanDelon alt="Alan Delon">
+            </template>
+            <template #brandText>
+              <h3 v-html=contentA.brandText2.ownerName></h3>
+              <Text
+                  fontSize="Small"
+                  :text=contentA.brandText2.brandText
+              />
+            </template>
+          </BrandContainer>
+        </template>
+      </QuotationContainer>
     </DirectionContainer>
   </div>
 </template>
 
 <style scoped lang="scss">
 @use 'assets/scss/colors' as colors;
+
 .ContentA {
   @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
     gap: 50px;
   }
-  .QuotationContainer {
-    max-width: 420px;
-    width: 100%;
-    gap: 40px;
-    display: flex;
-    flex-direction: column;
-    @media screen and (max-width: 768px) {
-      max-width: unset;
-    }
-    .QuotationBox {
-      border: 1px solid colors.$border;
-      padding: 25px 35px;
-      position: relative;
-      overflow: visible;
-    }
-    .QuotationBox::before {
-      content: "";
-      position: absolute;
-      top: -30px;
-      width: 55px;
-      height: 43px;
-      background-image: url("@/assets/img/quotationMarks.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-    .BrandContainer{
-      display: flex;
-      gap: 20px;
-      .BrandText{
-        display: flex;
-        flex-direction: column;
-        h3{
-          font-size: 16px;
-          line-height: 22px;
-          font-weight: 900;
-        }
-      }
-    }
-
-  }
-
 }
 </style>
