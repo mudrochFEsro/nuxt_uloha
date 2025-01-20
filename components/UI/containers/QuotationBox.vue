@@ -76,44 +76,40 @@
 <!--  }-->
 <!--}-->
 <!--</style>-->
-<script>
-export default {
-  data() {
-    return {
-      isExpanded: false,  // Stav zobrazenia celého textu
-      fullText: "Toto je nejaký dlhší text, ktorý sa má zobraziť na stránke. Text môže byť veľmi dlhý a mal by byť skrytý alebo zobrazený podľa potreby. Musí obsahovať dostatok informácií, aby to dávalo zmysel a slúžilo účelu testu. Tento text sa bude meniť v závislosti od toho, či je zobrazený celý alebo len časť."
-    };
-  },
-  computed: {
-    truncatedText() {
-      if (this.isExpanded) {
-        return this.fullText;  // Zobraziť celý text
-      }
-      return this.fullText.length > 225 ? this.fullText.slice(0, 225) + '...' : this.fullText;
-    }
-  },
-  methods: {
-    toggleText() {
-      this.isExpanded = !this.isExpanded;  // Prepnúť stav rozbalenia
-    }
-  }
+<script setup lang="ts">
+import { ref, computed, useSlots } from "vue";
+
+const isExpanded = ref(false);
+const slots = useSlots();
+
+const truncatedText = computed(() => {
+  const fullText = slots.default?.()[0]?.children || "";
+  return isExpanded.value
+      ? fullText
+      : fullText.length > 225
+          ? fullText.slice(0, 225) + "..."
+          : fullText;
+});
+
+const toggleText = () => {
+  isExpanded.value = !isExpanded.value;
 };
 </script>
+
 <template>
   <div class="text-container">
     <div class="text-content">
       <span>{{ truncatedText }}</span>
-      <button v-if="fullText.length > 125" @click="toggleText" class="toggleButton">
-        {{ isExpanded ? 'Zobraziť menej' : 'Zobraziť viac' }}
+      <button v-if="$slots.default?.()[0]?.children.length > 125" @click="toggleText" class="toggleButton">
+        {{ isExpanded ? "čítať menej" : "čítať viac" }}
       </button>
     </div>
   </div>
 </template>
 
-
-
 <style scoped lang="scss">
 @use "@/assets/scss/colors" as colors;
+
 .text-container {
   max-width: 100%;
 }
@@ -133,8 +129,11 @@ export default {
 
 .toggleButton {
   margin-left: 5px;
-  color: white;
+  color: colors.$ctaAndLink;
+  background-color: transparent;
   border: none;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: 800;
 }
 </style>
