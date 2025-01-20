@@ -49,7 +49,6 @@ p {
   max-height: 224px;
   overflow: hidden;
   position: relative;
-
 }
 
 .expanded {
@@ -68,10 +67,6 @@ p {
   padding-right: 115px;
   right: 0;
   bottom: 0;
-  //@media screen and (min-width: 665px) and (max-width: 768px) {
-  //  display: none;
-  //  visibility: hidden;
-  //}
   @media screen and (max-width: 768px) {
     padding-right: 32px;
   }
