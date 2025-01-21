@@ -5,7 +5,7 @@ defineProps<{
 }>();
 </script>
 <template>
-  <p :class="{fontSize, lineHeight}"  v-html="text"></p>
+  <p :class=fontSize  v-html="text"></p>
 </template>
 
 <style scoped lang="scss">
