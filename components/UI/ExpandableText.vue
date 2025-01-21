@@ -28,13 +28,13 @@ const truncatedText = computed(() => {
   }
 
   if (fullText.value.length > 286) {
-    return fullText.value.slice(0, 286) + "...";
+    return fullText.value.slice(0, 286) + " ...";
   }
 
   return fullText.value;
 });
 
-const hasTextSlot = computed(() => fullText.value.length > 0);
+const hasTextSlot = computed(() => fullText.value.length > 300);
 
 const toggleText = () => {
   isExpanded.value = !isExpanded.value;
@@ -42,12 +42,12 @@ const toggleText = () => {
 </script>
 
 <template>
-  <div class="ExpandableText">
+  <p class="ExpandableText">
     {{ truncatedText }}
-    <button v-if="hasTextSlot" @click="toggleText" >
+    <button v-if=hasTextSlot @click=toggleText >
       {{ isExpanded ? "čítať menej" : "čítať viac" }}
     </button>
-  </div>
+  </p>
 </template>
 
 
@@ -56,8 +56,6 @@ const toggleText = () => {
 .ExpandableText {
     line-height: 32px;
 }
-
-
 button {
   color: colors.$ctaAndLink;
   background-color: transparent;

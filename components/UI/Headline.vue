@@ -16,7 +16,6 @@ h2 {
   line-height: 64px;
   color: colors.$black;
   font-weight: 700;
-  max-width: 430px;
   width: 100%;
 
   :deep(span) {

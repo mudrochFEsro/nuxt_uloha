@@ -11,7 +11,6 @@ $spacing-0: (
         "70": 70px,
         "25": 25px,
         "10": 10px,
-        "100": 100px,
 );
 @each $size, $value in $spacing-0 {
   .p-top-#{$size} {
@@ -27,7 +26,6 @@ $spacing-0: (
 .p-top-140{
   padding-top: 140px;
 }
-
 
 $spacing-1: (
         "88": 88px,
@@ -67,6 +65,9 @@ $spacing-2: (
   .p-right-15 {
     margin: map.get($spacing-2, "0");
     padding: map.get($spacing-2, "0");
+  }
+  .p-top-140{
+    padding-top: map.get($spacing-2, "0");
   }
 }
 

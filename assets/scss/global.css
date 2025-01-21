@@ -41,18 +41,6 @@
   margin-top: -10px;
 }
 
-.p-top-100 {
-  padding-top: 100px;
-}
-
-.m-top-100 {
-  margin-top: 100px;
-}
-
-.minus-m-top-100 {
-  margin-top: -100px;
-}
-
 .p-top-140 {
   padding-top: 140px;
 }
@@ -104,17 +92,14 @@
     padding: 0px;
   }
 
-  .p-top-100,
-.m-top-100,
-.minus-m-top-100 {
-    margin: 0px;
-    padding: 0px;
-  }
-
   .p-left-15,
 .p-right-15 {
     margin: 0px;
     padding: 0px;
+  }
+
+  .p-top-140 {
+    padding-top: 0px;
   }
 }
 
