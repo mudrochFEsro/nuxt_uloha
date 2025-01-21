@@ -1,0 +1,77 @@
+<script setup lang="ts">
+import { ref, computed, useSlots, type VNode } from "vue";
+
+const isExpanded = ref(false);
+const slots = useSlots();
+
+const getSlotText = (): string => {
+  const slotContent = slots.default?.();
+  if (!slotContent || slotContent.length === 0) return "";
+
+  const firstNode = slotContent[0] as VNode;
+  if (typeof firstNode.props?.text === "string") {
+    return firstNode.props.text;
+  }
+
+  if (typeof firstNode.children === "string") {
+    return firstNode.children;
+  }
+
+  return "";
+};
+
+const fullText = computed(() => getSlotText());
+
+const truncatedText = computed(() => {
+  if (isExpanded.value) return fullText.value;
+  return fullText.value.length > 286 ? fullText.value.slice(0, 286) + "..." : fullText.value;
+});
+
+const hasTextSlot = computed(() => fullText.value.length > 0);
+
+const toggleText = () => {
+  isExpanded.value = !isExpanded.value;
+};
+</script>
+
+<template>
+  <div class="text-container">
+    <div class="text-content">
+      <span>{{ truncatedText }}</span>
+      <button v-if="hasTextSlot" @click="toggleText" class="toggleButton">
+        {{ isExpanded ? "čítať menej" : "čítať viac" }}
+      </button>
+    </div>
+  </div>
+</template>
+
+
+
+<style scoped lang="scss">
+@use "@/assets/scss/colors" as colors;
+
+.text-container {
+  max-width: 100%;
+}
+
+.text-content {
+  height: auto;
+}
+
+.text-content span {
+  max-width: 100%;
+  overflow: hidden;
+  line-height: 1.5em;
+  display: inline;
+}
+
+.toggleButton {
+  margin-left: 5px;
+  color: colors.$ctaAndLink;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 800;
+}
+</style>

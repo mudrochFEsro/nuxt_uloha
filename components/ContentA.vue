@@ -15,6 +15,7 @@ import AlanDelon from "@/assets/img/logo/alainDelonLogo.svg";
 import QuotationContainer from "@/components/UI/containers/QuotationContainer.vue";
 import QuotationBox from "@/components/UI/containers/QuotationBox.vue";
 import BrandContainer from "@/components/UI/containers/BrandContainer.vue";
+import ExpandableText from "~/components/UI/ExpandableText.vue";
 
 const contentA = {
   headlineText: "Rýchle <span>výsledky</span> pomocou UX auditu.",
@@ -29,6 +30,7 @@ const contentA = {
     "Zvýšime návštevnosť vašich stránok"
   ],
   text2: "Dosiahnite lepšie výsledky vašej webstránky alebo <nobr>e-shopu</nobr> <strong>pomocou UX auditu.</strong>",
+  text3: "Pravidelné UX audity a postupné vylepšovanie nášho internetového obchodu je už niekoľko rokov súčasťou našej dlhodobej stratégie v predaji. UX tím v Riešeniach odvádza skvelú prácu, ktorú sprevádzajú viditeľné výsledky a spokojnosť našich zákazníkov. Okrem ich prístupu k nášmu biznisu Pravidelné UX audity a postupné vylepšovanie nášho internetového obchodu je už niekoľko rokov súčasťou našej dlhodobej stratégie v predaji. UX tím v Riešeniach odvádza skvelú prácu, ktorú sprevádzajú viditeľné výsledky a spokojnosť našich zákazníkov. Okrem ich prístupu k nášmu biznisu",
   ctaText: "Mám záujem o UX audit",
   brandText1: {
     ownerName: "Jozef Korman",
@@ -92,12 +94,12 @@ const contentA = {
       <QuotationContainer class="p-right-15">
         <template #quotation>
           <QuotationBox>
-            Pravidelné UX audity a postupné vylepšovanie nášho internetového obchodu je už niekoľko rokov súčasťou našej
-            dlhodobej stratégie v predaji. UX tím v Riešeniach odvádza skvelú prácu, ktorú sprevádzajú viditeľné
-            výsledky a spokojnosť našich zákazníkov. Okrem ich prístupu k nášmu biznisu
-            Pravidelné UX audity a postupné vylepšovanie nášho internetového obchodu je už niekoľko rokov súčasťou našej
-            dlhodobej stratégie v predaji. UX tím v Riešeniach odvádza skvelú prácu, ktorú sprevádzajú viditeľné
-            výsledky a spokojnosť našich zákazníkov.
+            <ExpandableText>
+              <Text
+                  :text=contentA.text3
+                  fontSize="Small"
+              />
+            </ExpandableText>
           </QuotationBox>
         </template>
         <template #brand>
