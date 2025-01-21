@@ -43,7 +43,6 @@ const contentA = {
   }
 }
 </script>
-
 <template>
   <div class="ContentA">
     <DirectionContainer direction="Reverse">

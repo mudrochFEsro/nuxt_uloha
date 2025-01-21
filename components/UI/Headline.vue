@@ -1,7 +1,7 @@
 <script setup lang="ts">
 defineProps<{
   text: string
-  align: 'Left' | 'Center' | 'Right';
+  align?: 'Left' | 'Center' | 'Right';
 }>();
 </script>
 <template>
