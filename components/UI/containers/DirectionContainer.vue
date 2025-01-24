@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{
-  direction: 'Normal' | 'Reverse'
+  direction: 'Normal' | 'Reverse' | 'Left' | 'Center' | 'Right'
 }>();
 </script>
 
@@ -12,20 +12,39 @@ defineProps<{
 
 <style scoped lang="scss">
 .DirectionContainer {
-  justify-content: space-between;
   display: flex;
   width: 100%;
-}
-.DirectionReverse{
   @media screen and (max-width: 768px) {
     gap: 50px;
+
+  }
+}
+.DirectionReverse{
+  justify-content: space-between;
+  @media screen and (max-width: 768px) {
     flex-direction: column-reverse;
   }
 }
 .DirectionNormal{
+  justify-content: space-between;
   @media screen and (max-width: 768px) {
-    gap: 60px;
     flex-direction: column;
   }
 }
+.DirectionLeft{
+  justify-content: flex-start;
+  @media screen and (max-width: 768px) {
+  }
+}
+.DirectionCenter{
+  justify-content: center;
+  @media screen and (max-width: 768px) {
+  }
+}
+.DirectionRight{
+  justify-content: flex-end;
+  @media screen and (max-width: 768px) {
+  }
+}
+
 </style>
