@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import {ref} from "vue";
 import DirectionContainer from "@/components/UI/containers/DirectionContainer.vue";
 import Headline from "@/components/UI/Headline.vue";
 import googleLogo from "assets/img/logo/googlePartnerLogo.svg"
@@ -17,7 +18,7 @@ import QuotationBox from "@/components/UI/containers/QuotationBox.vue";
 import BrandContainer from "@/components/UI/containers/BrandContainer.vue";
 import ExpandableText from "~/components/UI/ExpandableText.vue";
 
-const contentA = {
+const contentA = ref({
   headlineText: "Rýchle <span>výsledky</span> pomocou UX auditu.",
   googleLogoAlt: "Google Partner Premium",
   memberOfADMALogoAlt: "Members of ADMA",
@@ -41,8 +42,9 @@ const contentA = {
     ownerName: "Richard Wohlstein",
     brandText: "Retail manager <a target='_blank' href='https://www.alaindelon.sk'>AlainDelon.sk</a>",
   }
-}
+});
 </script>
+
 <template>
   <div class="ContentA">
     <DirectionContainer direction="Reverse">
@@ -83,7 +85,7 @@ const contentA = {
             :text=contentA.text2
         />
       </TextContainer>
-      <CtaContainer class="p-left-15 p-top-70">
+      <CtaContainer class="p-left-15 p-top-70 p-bottom-50">
         <Button
             ctaSize="Big"
             :ctaText=contentA.ctaText

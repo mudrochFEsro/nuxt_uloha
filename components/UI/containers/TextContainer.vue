@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{
-  size: 'Wide' | 'Narrow'
+  size: 'Wide' | 'Narrow' | 'X-Narrow'
 }>();
 </script>
 <template>
@@ -28,6 +28,13 @@ defineProps<{
   @media screen and (max-width: 768px) {
     max-width: unset;
 
+  }
+}
+.X-Narrow{
+  max-width: 400px;
+  width: 100%;
+  @media screen and (max-width: 768px) {
+    max-width: unset;
   }
 }
 </style>

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref } from "vue";
 import Headline from "@/components/UI/Headline.vue";
 import HeadlineContainer from "@/components/UI/containers/HeadlineContainer.vue";
 import DirectionContainer from "@/components/UI/containers/DirectionContainer.vue";
@@ -8,8 +9,7 @@ import Three from '@/assets/img/3.svg';
 import Four from '@/assets/img/4.svg';
 import Arrow from '@/assets/img/arrow.svg'
 import NumberContainer from "~/components/UI/containers/NumberContainer.vue";
-
-const contentB = {
+const contentB = ref({
   headlineText: "Rýchla a jednoduchá cesta k&nbsp;<span>výsledkom.</span>",
   one: {
     headline: "Ciele auditu",
@@ -25,10 +25,9 @@ const contentB = {
   },
   four: {
     headline: "Výsledky auditu",
-    text: "<strong>Osobná prezentácia výsledkov a&nbsp;navrhnutých riešení</strong> s&nbsp;podrobnou dokumentáciou.",
+    text: "<strong>Osobná prezentácia výsledkov a&nbsp;navrhnutých riešení</strong> s&nbsp;podrobnou dokumentáciou."
   }
-};
-
+});
 </script>
 
 <template>

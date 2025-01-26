@@ -1,15 +1,17 @@
 <script lang="ts" setup>
+import {ref} from "vue";
+import SectionContainer from "@/components/UI/containers/SectionContainer.vue";
 // Hero
 import heroLogo from "@/assets/img/logo/rUxDesign.svg"
-import SectionContainer from "@/components/UI/containers/SectionContainer.vue";
-import ContentA from "@/components/ContentA.vue";
-import ContentB from "@/components/ContentB.vue";
-const heroContent = {
+const heroContent = ref({
   heroHeadline: 'Zvýšte svoje zisky optimalizáciou vášho eshopu.',
   heroCtaText: 'Mám záujem o UX audit',
   heroLogoAlt: 'R UX Design RIESENIA.com'
-}
+});
 // Content A
+import ContentA from "@/components/ContentA.vue";
+// Content B
+import ContentB from "@/components/ContentB.vue";
 </script>
 <template>
   <Hero
@@ -23,5 +25,8 @@ const heroContent = {
   </SectionContainer>
   <SectionContainer>
     <ContentB/>
+  </SectionContainer>
+  <SectionContainer>
+    <ContentC/>
   </SectionContainer>
 </template>

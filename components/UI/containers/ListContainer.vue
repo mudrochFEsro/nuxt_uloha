@@ -1,5 +1,11 @@
+<script setup lang="ts">
+defineProps<{
+  contSize?: 'Wide';
+}>();
+</script>
+
 <template>
-  <div class="ListContainer">
+  <div class="ListContainer" :class=contSize >
     <slot></slot>
   </div>
 </template>
@@ -11,5 +17,9 @@
   @media screen and (max-width: 980px) {
     max-width: unset;
   }
+}
+.Wide {
+  width: fit-content;
+  max-width: unset;
 }
 </style>
