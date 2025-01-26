@@ -17,7 +17,7 @@
     flex-direction: column;
     justify-content: center;
 
-    h3 {
+    :deep(h3) {
       font-size: 16px;
       line-height: 22px;
       font-weight: 900;

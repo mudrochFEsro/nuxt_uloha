@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{
-  direction: 'Normal' | 'Reverse' | 'Left' | 'Center' | 'Right'
+  direction: 'Normal' | 'Reverse' | 'Left' | 'Center' | 'Right';
 }>();
 </script>
 
@@ -34,16 +34,19 @@ defineProps<{
 .DirectionLeft{
   justify-content: flex-start;
   @media screen and (max-width: 768px) {
+    justify-content: flex-start;
   }
 }
 .DirectionCenter{
   justify-content: center;
   @media screen and (max-width: 768px) {
+    justify-content: flex-start;
   }
 }
 .DirectionRight{
   justify-content: flex-end;
   @media screen and (max-width: 768px) {
+    justify-content: flex-start;
   }
 }
 
