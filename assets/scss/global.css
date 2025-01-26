@@ -45,24 +45,28 @@
   margin-top: -25px;
 }
 
-.minus-m-top-10 {
-  margin-top: -10px;
-}
-
 @media screen and (max-width: 980px) {
   .p-top-88 {
     padding-top: 88px;
   }
 
-  .p-top-15,
-.p-left-15,
-.p-right-15 {
-    padding: 15px;
+  .p-top-15 {
+    padding-top: 15px;
   }
 
-  .p-left-88,
-.p-right-88 {
+  .p-left-15 {
+    padding-left: 15px;
+  }
+
+  .p-right-15 {
+    padding-right: 15px;
+  }
+
+  .p-left-88 {
     padding-left: 88px;
+  }
+
+  .p-right-88 {
     padding-right: 88px;
   }
 }
