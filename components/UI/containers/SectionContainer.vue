@@ -4,7 +4,6 @@
     </slot>
   </section>
 </template>
-
 <style scoped lang="scss">
   section {
     padding: 90px 30px 0 30px;
@@ -13,6 +12,12 @@
     max-width: 980px;
     @media screen and (max-width: 768px) {
       padding: 50px 25px 0 25px;
+    }
+  }
+  section:last-of-type {
+    padding: 90px 30px 90px 30px;
+    @media screen and (max-width: 768px) {
+      padding: 50px 25px 90px 25px;
     }
   }
 </style>

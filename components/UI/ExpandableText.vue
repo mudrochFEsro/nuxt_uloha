@@ -62,6 +62,6 @@ button {
   border: none;
   cursor: pointer;
   font-size: 16px;
-  font-weight: 800;
+  font-weight: 700;
 }
 </style>

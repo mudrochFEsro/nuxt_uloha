@@ -8,9 +8,7 @@ import Button from "@/components/UI/Button.vue";
 import TextContainer from "@/components/UI/containers/TextContainer.vue";
 import ListContainer from "@/components/UI/containers/ListContainer.vue";
 import CtaContainer from "~/components/UI/containers/CtaContainer.vue";
-
-
-const contentA = ref({
+const contentC = ref({
   headlineText: "Zameriame sa na to <span>najdôležitejšie.</span>",
   text1: "Dosiahnite lepšie výsledky vašej webstránky alebo <nobr>e-shopu</nobr> <strong>pomocou UX auditu.</strong>",
   listTexts: [
@@ -21,7 +19,6 @@ const contentA = ref({
     "Ciele, ktoré chcete dosiahnuť",
     "Webovú analytiku"
   ],
-
   ctaText: "Mám záujem o UX audit",
 });
 </script>
@@ -32,7 +29,7 @@ const contentA = ref({
       <TextContainer size="Narrow" class="p-right-15">
         <Headline
             align="Left"
-            :text=contentA.headlineText
+            :text=contentC.headlineText
         />
       </TextContainer>
     </DirectionContainer>
@@ -40,12 +37,12 @@ const contentA = ref({
       <TextContainer size="X-Narrow" class="p-right-15 p-top-50">
         <Text
             fontSize="Big"
-            :text=contentA.text1
+            :text=contentC.text1
         />
       </TextContainer>
       <ListContainer contSize="Wide" class="p-left-15 p-top-30">
         <List
-            :listTexts=contentA.listTexts
+            :listTexts=contentC.listTexts
         />
       </ListContainer>
     </DirectionContainer>
@@ -53,7 +50,7 @@ const contentA = ref({
       <CtaContainer position="Left">
         <Button
             ctaSize="Big"
-            :ctaText=contentA.ctaText
+            :ctaText=contentC.ctaText
         />
       </CtaContainer>
     </DirectionContainer>

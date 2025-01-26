@@ -22,6 +22,9 @@
       line-height: 22px;
       font-weight: 900;
     }
+    :deep(a) {
+      font-weight: 700;
+    }
   }
 }
 </style>
