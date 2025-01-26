@@ -15,6 +15,7 @@
   .BrandText {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 
     h3 {
       font-size: 16px;
