@@ -1,5 +1,11 @@
+<script setup lang="ts">
+defineProps<{
+  position?: 'Left';
+}>();
+</script>
+
 <template>
-  <div class="CtaContainer">
+  <div class="CtaContainer" :class="position">
     <slot></slot>
   </div>
 </template>
@@ -18,5 +24,14 @@
     max-width: unset;
     justify-content: center;
   }
+}
+.Left{
+  justify-content: flex-start;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
+}
+.Center{
+  justify-content: center;
 }
 </style>

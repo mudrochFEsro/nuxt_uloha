@@ -50,10 +50,12 @@ const contentA = ref({
       </ListContainer>
     </DirectionContainer>
     <DirectionContainer direction="Normal" class="minus-m-top-70">
-      <Button
-          ctaSize="Big"
-          :ctaText=contentA.ctaText
-      />
+      <CtaContainer position="Left">
+        <Button
+            ctaSize="Big"
+            :ctaText=contentA.ctaText
+        />
+      </CtaContainer>
     </DirectionContainer>
   </div>
 </template>
