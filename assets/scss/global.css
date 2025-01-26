@@ -41,6 +41,10 @@
   margin-top: -10px;
 }
 
+.p-bottom-65 {
+  padding-bottom: 65px;
+}
+
 .p-top-140 {
   padding-top: 140px;
 }
@@ -100,6 +104,10 @@
 
   .p-top-140 {
     padding-top: 0px;
+  }
+
+  .p-bottom-65 {
+    padding-bottom: 0px;
   }
 }
 
