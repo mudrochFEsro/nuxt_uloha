@@ -8,13 +8,6 @@ const heroContent = ref({
   heroCtaText: 'Mám záujem o UX audit',
   heroLogoAlt: 'R UX Design RIESENIA.com'
 });
-// // Content A
-// import ContentA from "@/components/ContentA.vue";
-// // Content B
-// import ContentB from "@/components/ContentB.vue";
-// // Content C
-// import ContentC from "@/components/ContentC.vue";
-// // Contact Banner
 import contactLogo from "@/assets/img/logo/rieseniaLogo.svg"
 const contactContent = ref({
   contactHeadline: 'Máte otázky? Jednoducho sa spýtajte.',
@@ -22,6 +15,8 @@ const contactContent = ref({
   contactEmail: 'uxdesign@riesenia.com',
   contactLogoAlt: 'RIESENIA'
 });
+import Form from "@/components/UI/form/Form.vue";
+
 </script>
 <template>
   <Hero
@@ -46,4 +41,5 @@ const contactContent = ref({
       :contactLogo=contactLogo
       :contactLogoAlt=contactContent.contactLogoAlt
   />
+  <Form/>
 </template>

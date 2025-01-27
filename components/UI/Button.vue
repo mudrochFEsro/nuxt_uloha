@@ -1,7 +1,7 @@
 <script setup lang="ts">
 defineProps<{
   ctaText?: string;
-  ctaSize?: 'Small' | 'Big';
+  ctaSize?: 'Small' | 'Big' | 'FullWidth';
 }>();
 </script>
 <template>
@@ -42,4 +42,17 @@ button {
     max-width: unset;
   }
 }
+.FullWidth {
+  font-size: 20px;
+  width: 100%;
+  height: 72px;
+  @media screen and (max-width: 980px) {
+    font-size: 2.1vw;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+    max-width: unset;
+  }
+}
+
 </style>
