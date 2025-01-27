@@ -11,7 +11,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="Hero">
+  <section class="Hero">
     <div class="HeroBody">
       <div class="HeroImgWrap">
         <img
@@ -25,7 +25,7 @@ defineProps<{
           :ctaText="ctaText"
       />
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped lang="scss">
