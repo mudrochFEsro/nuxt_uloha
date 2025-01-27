@@ -38,7 +38,12 @@ const validateForm = () => {
 
 const submitForm = () => {
   submitCount.value++;
-  if (submitCount.value === 1) {
+  if (submitCount.value % 2 === 0) {
+    successMessage.value = 'Formulár bol úspešne odoslaný!';
+    errorMessage.value = '';
+    form.value = { name: '', email: '', phone: '', website: '', note: '' };
+    errors.value = {};
+  } else {
     if (validateForm()) {
       errorMessage.value = '';
       successMessage.value = 'Formulár bol úspešne odoslaný!';
@@ -47,11 +52,6 @@ const submitForm = () => {
       successMessage.value = '';
       errorMessage.value = 'Prosím, vyplňte všetky povinné polia správne.';
     }
-  } else {
-    successMessage.value = 'Formulár bol úspešne odoslaný!';
-    errorMessage.value = '';
-    form.value = { name: '', email: '', phone: '', website: '', note: '' };
-    errors.value = {};
   }
 };
 </script>
