@@ -17,6 +17,7 @@ import QuotationContainer from "@/components/UI/containers/QuotationContainer.vu
 import QuotationBox from "@/components/UI/containers/QuotationBox.vue";
 import BrandContainer from "@/components/UI/containers/BrandContainer.vue";
 import ExpandableText from "~/components/UI/ExpandableText.vue";
+import {eventBus} from "~/eventBus";
 
 const contentA = ref({
   headlineText: "Rýchle <span>výsledky</span> pomocou UX auditu.",
@@ -43,6 +44,9 @@ const contentA = ref({
     brandText: "Retail manager <a target='_blank' href='https://www.alaindelon.sk'>AlainDelon.sk</a>",
   }
 });
+const handleButtonClick = () => {
+  eventBus.emit('openPopup');
+};
 </script>
 
 <template>
@@ -89,6 +93,7 @@ const contentA = ref({
         <Button
             ctaSize="Big"
             :ctaText=contentA.ctaText
+            @click=handleButtonClick
         />
       </CtaContainer>
     </DirectionContainer>

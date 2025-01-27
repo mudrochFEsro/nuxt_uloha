@@ -1,17 +1,26 @@
 <script setup>
-import { ref } from 'vue';
+import { ref,onMounted } from 'vue';
+import { eventBus } from '@/eventBus';
 import CloseButton from '@/assets/img/cross.svg';
 import Form from '@/components/UI/form/Form.vue';
 
-const isOpen = ref(true);
+const isOpen = ref(false);
 const isClosing = ref(false);
 
 const closePopup = () => {
   isClosing.value = true;
   setTimeout(() => {
     isOpen.value = false;
+    isClosing.value = false;
   }, 100);
 };
+
+const openPopup = () => {
+  isOpen.value = true;
+};
+onMounted(() => {
+  eventBus.on('openPopup', openPopup);
+});
 </script>
 
 <template>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Button from "@/components/UI/Button.vue";
+import { eventBus } from '@/eventBus';
 
 defineProps<{
   heroHeadline: string;
@@ -7,6 +8,10 @@ defineProps<{
   heroLogo: string;
   heroLogoAlt: string;
 }>();
+
+const handleButtonClick = () => {
+  eventBus.emit('openPopup');
+};
 
 </script>
 
@@ -22,7 +27,8 @@ defineProps<{
       <h1>{{ heroHeadline }}</h1>
       <Button
           ctaSize="Small"
-          :ctaText="ctaText"
+          :ctaText=ctaText
+          @click=handleButtonClick
       />
     </div>
   </section>

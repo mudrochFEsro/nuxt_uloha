@@ -8,6 +8,7 @@ import Button from "@/components/UI/Button.vue";
 import TextContainer from "@/components/UI/containers/TextContainer.vue";
 import ListContainer from "@/components/UI/containers/ListContainer.vue";
 import CtaContainer from "~/components/UI/containers/CtaContainer.vue";
+import {eventBus} from "~/eventBus";
 const contentC = ref({
   headlineText: "Zameriame sa na to <span>najdôležitejšie.</span>",
   text1: "Dosiahnite lepšie výsledky vašej webstránky alebo <nobr>e-shopu</nobr> <strong>pomocou UX auditu.</strong>",
@@ -21,6 +22,9 @@ const contentC = ref({
   ],
   ctaText: "Mám záujem o UX audit",
 });
+const handleButtonClick = () => {
+  eventBus.emit('openPopup');
+};
 </script>
 
 <template>
@@ -51,6 +55,7 @@ const contentC = ref({
         <Button
             ctaSize="Big"
             :ctaText=contentC.ctaText
+            @click=handleButtonClick
         />
       </CtaContainer>
     </DirectionContainer>
