@@ -53,7 +53,8 @@ defineProps<{
     display: flex;
     @media screen and (max-width: 768px) {
       flex-direction: column;
-      gap: 0
+      gap: 0;
+      align-items: center;
     }
     a{
       white-space: nowrap;
