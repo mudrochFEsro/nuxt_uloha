@@ -15,7 +15,7 @@ const contactContent = ref({
   contactEmail: 'uxdesign@riesenia.com',
   contactLogoAlt: 'RIESENIA'
 });
-import Form from "@/components/UI/form/Form.vue";
+import Popup from "@/components/UI/Popup.vue";
 
 </script>
 <template>
@@ -41,5 +41,5 @@ import Form from "@/components/UI/form/Form.vue";
       :contactLogo=contactLogo
       :contactLogoAlt=contactContent.contactLogoAlt
   />
-  <Form/>
+  <Popup/>
 </template>
