@@ -88,6 +88,10 @@ const submitForm = () => {
 .formRow {
   display: flex;
   gap: 15px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 0;
+  }
 }
 
 .error, .required {

@@ -28,6 +28,10 @@ defineEmits(["update:modelValue"]);
   background: colors.$input;
   min-height: 130px;
   resize: none;
+  @media screen and (max-width: 768px) {
+    min-height: 90px;
+
+  }
 }
 .textareaField:focus {
   outline: none;

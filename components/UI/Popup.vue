@@ -45,6 +45,9 @@ onMounted(() => {
   justify-content: center;
   align-items: center;
   transition: opacity 0.1s ease;
+  @media screen and (max-width: 768px) {
+    padding: 20px;
+  }
   .popup {
     box-shadow: 0 32px 45px 0 colors.$shadow;
     background: colors.$white;
@@ -65,6 +68,10 @@ onMounted(() => {
       line-height: 44px;
       font-weight: 900;
       margin-bottom: 25px;
+      @media screen and (max-width: 768px) {
+        font-size: 24px;
+        line-height: 34px;
+      }
     }
   }
 }
