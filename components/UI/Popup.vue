@@ -40,13 +40,13 @@ onMounted(() => {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.5);
+  background: colors.$popupOverlay;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: opacity 0.1s ease;
   .popup {
-    box-shadow: 0 32px 45px 0 rgba(0, 0, 0, 0.1498);
+    box-shadow: 0 32px 45px 0 colors.$shadow;
     background: colors.$white;
     padding: 60px 40px 40px 40px;
     width: 500px;
@@ -60,6 +60,7 @@ onMounted(() => {
       cursor: pointer;
     }
     .popupTitle {
+      color: colors.$black;
       font-size: 30px;
       line-height: 44px;
       font-weight: 900;

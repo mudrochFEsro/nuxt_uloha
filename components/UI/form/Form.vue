@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 import InputField from '@/components/UI/form/InputField.vue';
 import TextArea from '@/components/UI/form/TextArea.vue';
-import Button from "~/components/UI/Button.vue";
+import Button from "@/components/UI/Button.vue";
 
 const form = ref({ name: '', email: '', phone: '', website: '', note: '' });
 const errors = ref({});

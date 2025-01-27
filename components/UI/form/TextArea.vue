@@ -18,13 +18,14 @@ defineEmits(["update:modelValue"]);
   </div>
 </template>
 <style scoped lang="scss">
+@use 'assets/scss/colors' as colors;
 .textareaField {
   width: 100%;
   padding: 12px;
   border: unset;
   border-radius: 4px;
   font-size: 14px;
-  background: #f5f5f5;
+  background: colors.$input;
   min-height: 130px;
   resize: none;
 }
