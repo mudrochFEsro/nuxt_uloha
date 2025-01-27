@@ -1,4 +1,3 @@
-// Popup.vue
 <script setup>
 import { ref } from 'vue';
 import CloseButton from '@/assets/img/cross.svg';
