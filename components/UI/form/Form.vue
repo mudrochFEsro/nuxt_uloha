@@ -11,7 +11,7 @@ const errorMessage = ref('');
 const submitCount = ref(0);
 const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 const phoneRegex = /^[+]?[0-9]{10,15}$/;
-
+const websiteRegex = /^(https?:\/\/)?([\w-]+\.)+[\w-]+(\/[\w-]*)*$/;
 
 const validateForm = () => {
   errors.value = {};
@@ -29,6 +29,9 @@ const validateForm = () => {
   }
   if (form.value.phone && !phoneRegex.test(form.value.phone)) {
     errors.value.phone = 'Neplatný formát telefónneho čísla';
+  }
+  if (form.value.website && !websiteRegex.test(form.value.website)) {
+    errors.value.website = 'Neplatný formát webstránky';
   }
   return Object.keys(errors.value).length === 0;
 };
@@ -60,7 +63,7 @@ const submitForm = () => {
       <InputField v-model="form.email" label="E-mail" id="email" type="email" required :error="errors.email" />
       <InputField v-model="form.phone" label="Tel. číslo" id="phone" type="text" :error="errors.phone" />
     </div>
-    <InputField v-model="form.website" label="Webstránka" id="website" type="url" />
+    <InputField v-model="form.website" label="Webstránka" id="website" type="url" :error="errors.website" />
     <TextArea v-model="form.note" label="Poznámka" id="note" required :error="errors.note" />
     <Button ctaText="Kontaktujte ma" ctaSize="FullWidth" @click="submitForm"/>
     <p v-if="successMessage" class="success">{{ successMessage }}</p>
@@ -76,14 +79,10 @@ const submitForm = () => {
   width: 100%;
   label {
     display: block;
-    font-weight: bold;
-    font-size: 14px;
+    font-weight: 900;
+    font-size: 16px;
     margin-bottom: 5px;
   }
-}
-
-.required {
-  color: colors.$red;
 }
 
 .formRow {
@@ -91,9 +90,9 @@ const submitForm = () => {
   gap: 15px;
 }
 
-.error {
+.error, .required {
   color: colors.$red;
-  margin-top: 5px;
+  margin-top: 10px;
   font-weight: 700;
   font-size: 14px;
 }
@@ -101,7 +100,7 @@ const submitForm = () => {
 .success {
   color: colors.$green;
   font-size: 14px;
-  margin-top: 5px;
+  margin-top: 10px;
   font-weight: 700;
 }
 </style>
