@@ -3,6 +3,7 @@ import { ref } from 'vue';
 import CloseButton from '@/assets/img/cross.svg';
 import Button from "~/components/UI/Button.vue";
 const isOpen = ref(true);
+const isClosing = ref(false);
 const form = ref({ name: '', email: '', phone: '', website: '', note: '' });
 const errors = ref({});
 const successMessage = ref('');
@@ -27,12 +28,15 @@ const submitForm = () => {
   }
 };
 const closePopup = () => {
-  isOpen.value = false;
+  isClosing.value = true;
+  setTimeout(() => {
+    isOpen.value = false;
+  }, 100);
 };
 </script>
 
 <template>
-  <div v-if="isOpen" class="popupOverlay">
+  <div v-if="isOpen"  :class="{ 'popupOverlay': true, 'fadeOut': isClosing }">
     <div class="popup">
       <img class="closePopup" alt="Zavrieť" :src="CloseButton"  @click="closePopup" >
       <h2 class="popupTitle">Jednoducho nám napíšte a&nbsp;my sa vám ozveme.</h2>
@@ -87,6 +91,10 @@ const closePopup = () => {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: opacity 0.1s ease;
+}
+.fadeOut {
+  opacity: 0;
 }
 .popup {
   box-shadow: 0 32px 45px 0 rgba(0, 0, 0, 0.1498);
