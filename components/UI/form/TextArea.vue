@@ -29,8 +29,8 @@ defineEmits(["update:modelValue"]);
   min-height: 130px;
   resize: none;
   @media screen and (max-width: 768px) {
-    min-height: 90px;
-
+    min-height: unset;
+    height: 61.5px;
   }
 }
 .textareaField:focus {

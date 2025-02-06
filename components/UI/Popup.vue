@@ -1,6 +1,6 @@
 <script setup>
-import { ref, onMounted } from 'vue';
-import { eventBus } from '@/eventBus';
+import {ref, onMounted} from 'vue';
+import {eventBus} from '@/eventBus';
 import CloseButton from '@/assets/img/cross.svg';
 import Form from '@/components/UI/form/Form.vue';
 
@@ -29,13 +29,14 @@ onMounted(() => {
     <div class="popup">
       <img class="closePopup" alt="Zavrieť" :src="CloseButton" @click="closePopup">
       <h2 class="popupTitle">Jednoducho nám napíšte a&nbsp;my sa vám ozveme.</h2>
-      <Form />
+      <Form/>
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
 @use 'assets/scss/colors' as colors;
+
 .popupOverlay {
   position: fixed;
   top: 0;
@@ -51,7 +52,8 @@ onMounted(() => {
   transition: opacity 0.1s ease;
 
   @media screen and (max-width: 768px) {
-    padding: 20px;
+    align-items: center;
+    justify-content: center;
   }
 
   .popup {
@@ -61,6 +63,11 @@ onMounted(() => {
     width: 500px;
     text-align: center;
     position: relative;
+    @media screen and (max-width: 768px) {
+      height: fit-content;
+      width: 100%;
+      padding: 60px 40px 40px 40px;
+    }
 
     .closePopup {
       position: absolute;
